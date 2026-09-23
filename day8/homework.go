@@ -6,7 +6,7 @@ func main() {
 	var n int
 
 	fmt.Print("Menu:\n1. Add\n2. Delete\n3. Find\n4. Exit\n")
-	fmt.Println("Enter number of operation: ")
+	fmt.Print("Enter number of operation: ")
 	fmt.Scan(&n)
 
 	switch n {
@@ -23,7 +23,7 @@ func main() {
 	}
 
 	var day int
-	fmt.Println("Enter day of the week (1-7): ")
+	fmt.Print("Enter day of the week (1-7): ")
 	fmt.Scan(&day)
 
 	switch day {
@@ -41,12 +41,15 @@ func main() {
 		fmt.Println("Saturday")
 	case 7:
 		fmt.Println("Sunday")
+	default:
+		fmt.Println("Unknown day")
 	}
 
-	var firstNum, secondNum, operation int
-	fmt.Println("Enter first number: ")
+	var firstNum, secondNum float64
+	var operation int
+	fmt.Print("Enter first number: ")
 	fmt.Scan(&firstNum)
-	fmt.Println("Enter second number: ")
+	fmt.Print("Enter second number: ")
 	fmt.Scan(&secondNum)
 
 	fmt.Println("Choose operation:")
@@ -55,7 +58,7 @@ func main() {
 	fmt.Println("3. Multiply")
 	fmt.Println("4. Divide")
 
-	fmt.Println("Enter number of operation: ")
+	fmt.Print("Enter number of operation: ")
 	fmt.Scan(&operation)
 
 	switch operation {
@@ -77,19 +80,19 @@ func main() {
 	}
 }
 
-func add(a int, b int) int {
+func add(a float64, b float64) float64 {
 	return a + b
 }
 
-func subtract(a int, b int) int {
+func subtract(a float64, b float64) float64 {
 	return a - b
 }
 
-func multiply(a int, b int) int {
+func multiply(a float64, b float64) float64 {
 	return a * b
 }
 
-func divide(a int, b int) (int, error) {
+func divide(a float64, b float64) (float64, error) {
 	if b == 0 {
 		return 0, fmt.Errorf("division by zero")
 	}
