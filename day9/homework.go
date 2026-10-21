@@ -27,7 +27,7 @@ func main() {
 	case 3:
 		fmt.Println("Result:", multiply(firstNum, secondNum))
 	case 4:
-		result, err := save_divide(firstNum, secondNum)
+		result, err := safeDivide(firstNum, secondNum)
 		if err != nil {
 			fmt.Println("Error:", err)
 		} else {
